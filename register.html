@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="../static/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="../static/jquery34/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../static/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/js/register.js"></script>
+    <style>
+        body, button, input, select, textarea, h1, h2, h3, h4, h5, h6 {
+            font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }
+    </style>
+</head>
+<body background="../static/images/register-background.jpg" style=" background-repeat:no-repeat ;background-size:100% 100%;
+      background-attachment: fixed;">
+<nav class="navbar navbar-light bg-light"
+     style="margin-bottom: 1%;background-image: linear-gradient(90deg ,#fefefe,#fefefe,#fefefe,#fefefe,#fbaf30);opacity: 0.8">
+    <a class="navbar-brand nav-link" href="/main" style="opacity: 1">
+        <img src="../static/images/helmet.png" class="d-inline-block align-top" width="30" height="30">
+        主页
+    </a>
+
+    <a class="navbar-brand nav-link" href="#">
+        <img src="../static/images/user2.png" class="d-inline-block align-top" width="30" height="30">
+    </a>
+</nav>
+<div class="container">
+    <div class="jumbotron shadow" style="background-color: rgba(245,245,245,0.90);padding-top: 32px">
+        <div class="row m-0">
+            <div class="col-6">
+                <div class="row">
+                    <img src="../static/images/helmet.png" width="70" height="70">
+                    <p class="display-4 ">注册</p>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <img src="../static/images/回形针.png" class="float-right" width="70" height="70">
+            </div>
+
+        </div>
+        <div class="row justify-content-center">
+            <form class="w-50 m-1" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <img id="picturePreview" src="../static/images/picPick.png"
+                         class="rounded mx-auto d-block w-25 h-50">
+                </div>
+                <div class="form-group row justify-content-center">
+                    <label id="pictureLabel" class="btn btn-outline-secondary " for="picturePick">上传照片</label>
+                    <input type="file" id="picturePick" hidden>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" for="name">姓名</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="name">性别</label>
+                    <div class="col-10 align-self-center">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sex" id="male" value="male">
+                            <label class="form-check-label" for="male">男</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sex" id="female" value="female">
+                            <label class="form-check-label" for="female">女</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="workNumber">工号</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" id="workNumber" placeholder="Work Number">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="liveAddress">住址</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" id="liveAddress" placeholder="Live Address">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="position">职务</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" id="position" placeholder="Position">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="phone">电话</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" id="phone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="workAddress">工作区</label>
+                    <div class="col-10">
+                        <select id="workAddress" class="form-control">
+                            <option selected>XXX厂A区</option>
+                            <option selected>XXX厂B区</option>
+                            <option selected>XXX厂C区</option>
+                            <option selected>XXX厂D区</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <input id="reg" type="button" class="btn btn-warning btn-block w-25 " value="注册">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="navbar-fixed-bottom">
+    <div class="container">
+        <hr class="my-4">
+
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情</title>
+    <link rel="stylesheet" href="../static/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="../static/jquery34/jquery-3.4.0.min.js"></script>
+    <script src="../static/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <style>
+        body, button, input, select, textarea, h1, h2, h3, h4, h5, h6 {
+            font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }
+    </style>
+</head>
+<body style="background-color: #f5f5f5;">
+<nav class="navbar navbar-light bg-light"
+     style="margin-bottom: 1%;background-image: linear-gradient(90deg ,#fefefe,#fefefe,#fefefe,#fefefe,#fbaf30);opacity: 0.80">
+    <a class="navbar-brand nav-link" href="/main" style="opacity: 1">
+        <img src="../static/images/helmet.png" class="d-inline-block align-top" width="30" height="30">
+        主页
+    </a>
+    <a class="navbar-brand nav-link" href="#">
+        <img src="../static/images/user2.png" class="d-inline-block align-top" width="30" height="30">
+    </a>
+</nav>
+<div class="container rounded p-3 shadow" style="background-color: rgba(255,255,255,0.90);">
+    <div class="row m-0">
+        <div class="col-9">
+            <div class="row">
+                <img src="../static/images/worker2.png" width="70" height="70">
+                <p class="display-4">详细信息</p>
+            </div>
+        </div>
+        <div class="col-3">
+            <img src="../static/images/回形针.png" class="float-right" width="70">
+        </div>
+    </div>
+    <hr class="my-4">
+    <div class="row justify-content-center">
+        <div class="col-6 text-center">
+            <div class="row justify-content-center">
+                <div class="card" style="width: 20rem;">
+                    <img src="{{ photo_self }}" class="card-img-top" alt="..."  height="250">
+                    <div class="card-body">
+                        <p class="card-text text-center">本人照片</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row justify-content-center">
+                <div class="card" style="width: 20rem;">
+                    <img src="{{ photo_scene }}" class="card-img-top" alt="..."  height="250">
+                    <div class="card-body">
+                        <p class="card-text text-center">实地拍摄</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+        <div class="col-6">
+            <div class="row justify-content-center">
+                <div>
+                    <div class="row">
+                        <p class="form-control-plaintext">姓名：{{ name }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="form-control-plaintext">性别：{{ sex }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="form-control-plaintext">工号：{{ workNumber }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="form-control-plaintext">住址：{{ liveAddress }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row justify-content-center">
+                <div>
+                    <div class="row">
+                        <p class="form-control-plaintext">职务：{{ position }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="form-control-plaintext">电话：{{ phoneNumber }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="form-control-plaintext">工作区：{{ workAddress }}</p>
+                    </div>
+                     <div class="row">
+                        <p class="form-control-plaintext">记录时刻：{{ time }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<footer class="navbar-fixed-bottom">
+    <div class="container">
+        <hr class="my-4">
+
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>安全记录</title>
+    <link rel="stylesheet" href="../static/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script type="text/javascript" src="../static/jquery34/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../static/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/js/record.js"></script>
+    <style>
+        body, button, input, select, textarea, h1, h2, h3, h4, h5, h6 {
+            font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }
+    </style>
+</head>
+<body style="background-color: #f5f5f5;">
+<div class="row">
+    <nav class="navbar navbar-light bg-light w-100"
+         style="margin-bottom: 1%;background-image: linear-gradient(90deg ,#fefefe,#fefefe,#fefefe,#fefefe,#fefefe,#fbaf30);opacity: 0.80">
+        <a class="navbar-brand nav-link" href="/main" style="opacity: 1">
+            <img src="../static/images/helmet.png" class="d-inline-block align-top" width="30" height="30">
+            主页
+        </a>
+        <a class="navbar-brand nav-link" href="#">
+            <img src="../static/images/user2.png" class="d-inline-block align-top" width="30" height="30">
+        </a>
+    </nav>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-10 p-5 rounded shadow" style="background-color: #ffffff">
+        <div class="row align-items-end" style="margin-bottom: 30px">
+            <div class="col-6">
+                <div class="row align-items-end">
+                    <img src="../static/images/警告.png" width="70" height="70">
+                    <div class="display-4">安全记录</div>
+                </div>
+            </div>
+            <div class="col-6" style="padding-right: 0">
+                <div class="float-right">
+                    <nav class="navbar m-0 p-0">
+                        <form class="form-inline">
+                            <input id="search-content" class="form-control mr-sm-2 w-75" type="search" placeholder="请输入时间/工号"
+                                   aria-label="Search">
+                            <button id="search" class="btn btn-warning my-2 my-sm-0" type="button">搜索</button>
+                        </form>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row align-items-center">
+                    <h2 class="text-center">违规操作人员记录</h2>
+                    <button class="btn btn-warning m-2" id="refresh">刷新</button>
+                </div>
+            </div>
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">详细信息</th>
+                    <th scope="col">时间</th>
+                    <th scope="col">工号</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">工作区</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+            <div class="col-4 text-center align-self-center">
+                显示第 <span id="startCount">1</span> 至 <span id="endCount">10</span> 项记录，共 <span id="counts">57</span> 项
+            </div>
+            <div class="col-4 align-self-center" style="padding-right: 0">
+                <button  id="nextPage" class="btn btn-warning float-right m-1">下一页</button>
+                <button id="prePage" class="btn btn-warning float-right m-1">上一页</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="navbar-fixed-bottom">
+    <div class="container">
+        <hr class="my-4">
+
+    </div>
+</footer>
+</body>
+</html>
